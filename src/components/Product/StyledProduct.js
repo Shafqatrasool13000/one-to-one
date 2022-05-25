@@ -2,6 +2,7 @@ import styled from 'styled-components';
 export const ProductStyledMain=styled.div`
 .card{
 border:none;
+cursor: pointer;
 .img-heart{
 position:absolute;
 right:5%;

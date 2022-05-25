@@ -12,6 +12,7 @@ import Experience from '../Experience/Experience';
 import Footer from '../Footer/Footer';
 import Testomonial from '../Testomonial/Testomonial';
 import { StyledLandingPage } from './StyledLandingPage';
+import ProductsHeading from '../Products/ProductsHeading';
 
 const LandingPage = () => {
 
@@ -23,7 +24,7 @@ const LandingPage = () => {
         img: redgloves, emptyHeart: emptyHeart, discount: '50% OFF'
     }, {
         img: blackgloves, fillHeart: fillHeart
-    }]
+    }];
     const gainProtectProducts= [{
         img: groinRed, emptyHeart: emptyHeart
     }, {
@@ -32,33 +33,37 @@ const LandingPage = () => {
         img: groinRed, emptyHeart: emptyHeart
     }, {
         img: groinBlack, fillHeart: fillHeart, discount: '50% OFF'
-    }]
+    }];
     return (
         <StyledLandingPage>
             <div className="d-md-none">
-
             <Navbars />
             </div>
             <HeroSection />
             <div className="hand-protection mt-3 mt-md-0">
-                <Products title='Hand Protection' products={handProtectProducts} />
+                <ProductsHeading title='Hand Protection'/>
+                <Products  products={handProtectProducts} />
             </div>
             <div className="gain-protection mt-80">
-                <Products title='Groin Protection' products={gainProtectProducts} />
+            <ProductsHeading title='Groin Protection'/>
+                <Products  products={gainProtectProducts} />
             </div>
             <div className="experience-section mt-80">
                 <Experience/>
             </div>
             <div className="head-protection mt-80">
-                <Products title='Head Protection' products={gainProtectProducts} />
+                <ProductsHeading title='Head Protection'/>
+                <Products  products={gainProtectProducts} />
             </div>
             <div className="shin-protection mt-80">
-                <Products title='Shin Protection' products={handProtectProducts} />
+            <ProductsHeading title='Shin Protection'/>
+
+                <Products  products={handProtectProducts} />
             </div>
             <div className="testomonial-section mt-80">
                 <Testomonial/> 
              </div>
-            <div className="footer-section">
+            <div className="footer-section mt-80">
                 <Footer/>
             </div>
         </StyledLandingPage>

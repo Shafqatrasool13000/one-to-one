@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const NavbarStyledMain=styled.div`
+export const Navbar2StyledMain=styled.div`
     .authenticate-buttons-scroll{
     margin-top: 4px !important;
     }
@@ -19,9 +19,9 @@ z-index:50;
 .authenticate-buttons{
 margin-top: 16px;
 .signup-btn{
-background-color: #FFFFFF;
+color: #FFFFFF;
 font-size:16px;
-color: #ED1C24;
+background-color: #ED1C24;
 margin-right: 20px;
 @media screen and (max-width:480px) {
  background-color: black;
@@ -32,11 +32,12 @@ margin-right: 20px;
 .login-btn{
 background:transparent;
 font-size:16px;
-border: 1px solid #FFFFFF;
-color: #FFFFFF;
+border: 1px solid #ED1C24;
+color: #ED1C24;
 margin-right: 88px;
 @media screen and (max-width:480px) {
  background-color: red;
+ color: white;
 
 }
 } 

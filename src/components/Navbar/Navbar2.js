@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/icons/ic_logo.svg';
-import { NavbarStyledMain } from './StyledNavbar';
+import { Navbar2StyledMain } from './StyledNavbar2';
 
-const Navbars = () => {
+const Navbars2 = () => {
   const [navbar, setNavbar] = useState(false)
   const changeBackground = () => {
     if (window.scrollY >= 66) {
@@ -22,7 +22,7 @@ const Navbars = () => {
   
   
   return (
-    <NavbarStyledMain>
+    <Navbar2StyledMain>
       <Navbar className={`${navbar?'scroll':'navbar'}`}  expand="lg">
         <Container>
           <Navbar.Brand href="#">
@@ -49,8 +49,8 @@ const Navbars = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </NavbarStyledMain>
+    </Navbar2StyledMain>
   )
 }
 
-export default Navbars
+export default Navbars2

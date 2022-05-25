@@ -1,0 +1,276 @@
+{
+	"variables": [],
+	"info": {
+		"name": "alex",
+		"_postman_id": "8357bd8a-e816-0911-2c55-4cb339ffe48e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/auth/signup",
+			"request": {
+				"url": "{{dev}}/api/auth/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "requestToken",
+						"value": "20220411120057131531183(+923008134089)",
+						"description": ""
+					},
+					{
+						"key": "lang",
+						"value": "en",
+						"description": ""
+					},
+					{
+						"key": "context",
+						"value": "ios",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY1MDkyODIzMywiZXhwIjoxNjUwOTQ2MjMzfQ.7Um3Q0kD9r2ZP4EjjazNjzFsz_z32RU5Xqnx6JhkLBQvElm07X2tmxGS-wCFCIonmIqNFhvHk-6TSBJLmRAY-g",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n{\r\n\t\"email\": \"jamenjamem@gmail.com\",\r\n\t\"firstName\": \"Jamen\",\r\n\t\"lastName\": \"Jamen\",\r\n\t\"password\": \"1234567890\",\r\n\t\"phoneNumber\": \"+19492923855\",\r\n\t\"role\": [\r\n\t\t\"user\"\r\n\t],\r\n\t\"userId\": 0,\r\n\t\"username\": \"jamenjamen\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/auth/signup copy",
+			"request": {
+				"url": "{{localhost}}/api/auth/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "20220411120057131531183(+923008134089)",
+						"description": ""
+					},
+					{
+						"key": "lang",
+						"value": "en",
+						"description": ""
+					},
+					{
+						"key": "context",
+						"value": "ios",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"arslan\",\r\n  \"email\": \"ahasn@gmail.com\",\r\n  \"phoneNumber\":\"+923008134089\",\r\n  \"role\": [\"ROLE_ADMIN\"],\r\n  \"password\": \"1234566\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/auth/signin",
+			"request": {
+				"url": "{{dev}}/api/auth/signin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZWNoZ2Vla25leHQiLCJleHAiOjE2NDkwNjQ3MzUsImlhdCI6MTY0OTA0NjczNX0.IJwPv5f10SgMjDHUwOYy5XC6dvpjrSOKaUsvnB_COmCVk5WwK8A2bs-knNw4yAEXolmuqJb2ws7ms4Dx7Hd8DA",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"1234566\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/test/user",
+			"request": {
+				"url": "{{live}}/api/admin/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY1MDQzMTIzNSwiZXhwIjoxNjUwNDQ5MjM1fQ.o5EP5f87OGzTDhoDGM5ytLFtwiBi4EaAvN8ZpGzhGE46g54ORHPXenOTxaX6v9j2Gk3Bqy27IbpQ4CUv9gU1Ow",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/admin/users/10",
+			"request": {
+				"url": "{{dev}}/api/admin/getusersbyid/10",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/getprelogindata",
+			"request": {
+				"url": "http://54.81.31.37:8080/api/getprelogindata",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/admin/submitform",
+			"request": {
+				"url": "{{live}}/api/admin/submitform",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "*",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 3,\r\n\t\"username\": \"ArslanAhsanQureshi\",\r\n\t\"firstName\": \"adlskf\",\r\n\t\"lastName\": \"asdfmk\",\r\n\t\"email\": \"dasflakdsfj@gmail.com\",\r\n\t\"password\": \"$2a$10$Jhx0DYX110Gy1SaQ1SvtEOpGZVePiXX0oUcm3.vhpyVpQg4eX/4NS\",\r\n\t\"phoneNumber\": \"+923008134089\",\r\n\t\"roles\": [\r\n\t\t{\r\n\t\t\t\"id\": 1,\r\n\t\t\t\"name\": \"ROLE_USER\"\r\n\t\t}\r\n\t],\r\n\t\"clientInformationEntity\": {\r\n\t\t\"id\": 0,\r\n\t\t\"language\": \"English\",\r\n\t\t\"status\": \"Driver\",\r\n\t\t\"martialStatus\": \"Single\",\r\n\t\t\"gender\": \"Male\",\r\n\t\t\"fullName\": \"M Arsla Ahsan\",\r\n\t\t\"dataOfBirth\": \"14/04/1995\",\r\n\t\t\"age\": \"26\",\r\n\t\t\"address\": \"House#521 Gali# 10\",\r\n\t\t\"state\": \"Punjab\",\r\n\t\t\"city\": \"Isamabad\",\r\n\t\t\"zip\": \"2124\",\r\n\t\t\"email\": \"arslan.ahsan12@gmail.com\",\r\n\t\t\"homePhoneNumber\": \"+923008134089\",\r\n\t\t\"cellPhoneNumber\": \"+923008134089\",\r\n\t\t\"ecFullName\": \"Adnan Ahsan\",\r\n\t\t\"ecContact\": \"+923008134076\",\r\n\t\t\"ecRelation\": \"Brother\",\r\n\t\t\"acDriverLicense\": \"849339849339\",\r\n\t\t\"acState\": \"California\",\r\n\t\t\"acExpires\": \"2024/12/12\",\r\n\t\t\"acSSH\": \"134076134076\",\r\n\t\t\"acPriorInjures\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry\"\r\n\t},\r\n\t\"clientIntakeInterviewEntity\": {\r\n\t\t\"id\": 0,\r\n\t\t\"interviewDate\": \"2022/21/12\",\r\n\t\t\"interviewBy\": \"Arslan Ahsan\",\r\n\t\t\"caseSource\": \"Dummy\",\r\n\t\t\"dataOfLoss\": \"2022/12/11\",\r\n\t\t\"caseType\": \"Raod Accident\",\r\n\t\t\"photos\": \"Yes\",\r\n\t\t\"purposeOfYourTrip\": \"For travel to the United States on a temporary basis, including tourism, temporary employment\",\r\n\t\t\"comingFrom\": \"Canda\",\r\n\t\t\"drivingTo\": \"USA\",\r\n\t\t\"accidentLocation\": \"USA\",\r\n\t\t\"city\": \"California\"\r\n\t},\r\n\t\"employmentInformationEntity\": {\r\n\t\t\"id\": 0,\r\n\t\t\"fullName\": \"Adnan Ahsan\",\r\n\t\t\"cellPhoneNumber\": \"+923008134076\",\r\n\t\t\"state\": \"Punjab\",\r\n\t\t\"city\": \"Islamabad\",\r\n\t\t\"address\": \"House#521 Gali# 10\",\r\n\t\t\"lossOfEarnings\": \"Dummy\",\r\n\t\t\"salary\": \"100K\",\r\n\t\t\"daysLost\": \"2022/12/12\",\r\n\t\t\"supervisor\": \"Dummy\"\r\n\t},\r\n\t\"injuryInformationEntity\": {\r\n\t\t\"id\": 0,\r\n\t\t\"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. \",\r\n\t\t\"ambulance\": \"yes\",\r\n\t\t\"companyName\": \"Edhi\",\r\n\t\t\"companyPhone\": \"+923008134089\",\r\n\t\t\"hospital\": \"Dummy\",\r\n\t\t\"hospitalPhone\": \"923008134089\",\r\n\t\t\"firstDoctorAddress\": \"Dummy Address\",\r\n\t\t\"firstDoctorPhone\": \"923008134089\",\r\n\t\t\"secondDoctorAddress\": \"Dummy Address\",\r\n\t\t\"secondDoctorPhone\": \"923008134089\",\r\n\t\t\"comments\": \"Dummy Comments\"\r\n\t},\r\n\t\"insuranceInformationEntity\": {\r\n\t\t\"id\": 0,\r\n\t\t\"carrier\": \"Dummy\",\r\n\t\t\"phoneNumber\": \"Dummy\",\r\n\t\t\"policyNo\": \"Dummy\",\r\n\t\t\"validFrom\": \"Dummy\",\r\n\t\t\"validTo\": \"Dummy\",\r\n\t\t\"claim\": \"Dummy\",\r\n\t\t\"adjuster\": \"Dummy\",\r\n\t\t\"agentAddress\": \"Dummy\",\r\n\t\t\"agentPhoneNumber\": \"Dummy\",\r\n\t\t\"coverage\": \"Dummy\",\r\n\t\t\"liabilityBI\": \"Dummy\",\r\n\t\t\"pd\": \"Dummy\",\r\n\t\t\"rentail\": \"Dummy\"\r\n\t},\r\n\t\"propertyDamageEntity\": {\r\n\t\t\"id\": 0,\r\n\t\t\"year\": \"Dummy\",\r\n\t\t\"make\": \"Dummy\",\r\n\t\t\"model\": \"Dummy\",\r\n\t\t\"color\": \"Dummy\",\r\n\t\t\"licensePlate\": \"Dummy\",\r\n\t\t\"status\": \"Dummy\",\r\n\t\t\"registerOwner\": \"Dummy\",\r\n\t\t\"address\": \"Dummy\",\r\n\t\t\"relationshipToDriver\": \"Dummy\",\r\n\t\t\"phoneNumber\": \"Dummy\",\r\n\t\t\"locationOfVechile\": \"Dummy\",\r\n\t\t\"towed\": \"Dummy\",\r\n\t\t\"towingName\": \"Dummy\",\r\n\t\t\"towingAddress\": \"Dummy\",\r\n\t\t\"towingType\": \"Dummy\",\r\n\t\t\"descriptionOfDamage\": \"Dummy\",\r\n\t\t\"priorDamage\": \"Dummy\",\r\n\t\t\"mechanicalFailure\": \"Dummy\"\r\n\t}\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{localmachine}}/api/admin/users",
+			"request": {
+				"url": "{{localmachine}}/api/admin/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}/api/auth/signin",
+			"request": {
+				"url": "{{localhost}}/api/auth/signin",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}/api/getlabellist",
+			"request": {
+				"url": "{{localhost}}/api/getLabelList",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}/api/updateLabelList",
+			"request": {
+				"url": "{{localhost}}/api/updateLabelList",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"authorizationToReleaseRecords\": {\n            \"id\": 1,\n            \"text\": \"THE WILL A.UTHORIZE any physici  hospital medical attendant or o“fiers to furnish Pacific Attorney \\r\\nGroup, or any representative thereof, an3• and all infomation or opinions, is hich they may request \\r\\nregarding my physical condition and treaonent rendered therefore, and to allow their to see or copy \\r\\nany x-rays or records which you may have regarding my care, condition or treatment.\\r\\n\\r\\nYou are further requested to disclose no information to any insurance adjuster or other persons \\r\\nwithout written authority kom  me to do so, ALL PRIOR AUTHORIZATIONS ARE HEREBY CANCELED.\\r\\n\\r\\nTHIS FULL FURTHER AUTHORIZE any police department or Department of any city, coimty or stated, to \\r\\nfurnish The Pacific Attorney Grotto OE dfL/ representative thereof any and all information. oe \\r\\nopinions which they may request with respect to me, and to allow them to see or copy any police \\r\\nreports, photographs, statements, or other records, documents or papers pertaining to me, in the \\r\\npossession or under the control of said police department oz law enforcement agency,\\r\\n\\r\\nTHIS WILL FURTHER AUTHORIZE any employee to furnish The Pacific Attorney Group oz any \\r\\nrepresentative thereof any and all information which they may request regarding my employment, \\r\\nincluding dates and durations of service, rates of pay length of time missed froin v•orl‹, and \\r\\nan)rother information or material concerning my employment.\\r\\nPhoto static copies of this authorization will be considered valid as the original.\",\n            \"note\": \"The €alifornta Es'idence Code Section 1158 states:\\r\\n\\\"Failure to make such records available dnriag trim business bourc, within five days after the \\r\\npresentation of the written authorization, may subject the person or entity having custody or \\r\\ncontrol of the records te liability for ed reuse*.able expenses, inclu*—n•q xtto rn•.i\\\"s f•.e*, \\r\\nincnrr•.d in en;• proceeding to enforce the provisions of this section.”\"\n        },\n        \"authorizationForReleaseOfInformation\": {\n            \"id\": 1,\n            \"authorizeText\": \"assad\",\n            \"text\": \"asdas\",\n            \"forThePurposeOfText\": \"sdasd\",\n            \"checkBoxesHeading\": \"sasa\"\n        },\n        \"contingencyFeeAgreement\": {\n            \"id\": 1,\n            \"heading\": \"In consideration of the legal services to be rendered by PACIFIC ATTORNEY GROUP, PROFESSIONAL LAW CORPORATION(PAG), for the prosecution of all claims existing on my part against parties legally responsible for damages I have sustained, I hereby employ PAC\",\n            \"footer\": \"I hereby acknowledge that I have read this document, understand it, and agree to is terins.\",\n            \"f\": \"IF THERE IS NO RECOVERY, CLIENT SHALL OWE NO FEE OR COSTS INCURRED BY PACIFIC ATTORNEY GROUP.\",\n            \"i\": \"Disclaimer of Guarantee: Nothing in this contract and nothing in any statements to Client will be construed as a promise or guarantee about the outcome of Client's matter. PAG makes no promises or guarantees. Comments about the outcome of Client's matter \",\n            \"g\": \"Discharge and withdrawal: Client mav discharge Attorney at any time, in accordance with the provisions of California Rule of Professional Conduct 1.16 and upon reasonable notice to the Firm. The Firm may withdraw from representation of Client (a) with Cli\",\n            \"p\": \"Adverse Judgment Against Clients: If a judgment is obtained against client for any sum, client shall be responsible for any such sum as well as all costs and expenses including attorney's fees. PAG shall not be responsible for any such costs or expenses.\",\n            \"o\": \"Power of Attorney: Client expressly gives to PAG full power and authorin to sign Client's name to checks, drafts, releases, court documents, and other instruments incidental to this claim, which power will be used only where the Client has consented to th\",\n            \"m\": \"Medical Liens: Client expressly gives to PAG authorization to pay directly to any Medical provider any balance owed by Client for related medical services. If a dispute between medical providers and Client occurs, Client authorizes PAG to deduct their fee\",\n            \"n\": \"Conflict Waiver: Per Rule 1.7 clients expressly acknowledge that Attorney has explained that a potential conflict of interest is presented any time attorney represents more than one Client in a case or matter. Although Clients have not indicated there is \",\n            \"k\": \"Disputes: Client agrees that all disputes between Attorney and Client, including costs, fees, quality of service, malpractice claims to include breach of fiduciary\\r\\nduty, and or fraud shall be submitted to binding arbitration. Discovery shall be pursuant \",\n            \"l\": \"Substitution or Association of Attorney: PAG may find it necessary to hire oth attorneys, experts or support personnel in the representation of Client and Clien consents to the hiring of such attorneys or others without further notice. Client acknowledge\",\n            \"e\": \"Consent: of the undersigned shall be required for any settlement to become binding and Client agrees not to arbitrarily withhold consent to a reasonable settlement offer. In the event that Client accepts payments for part or all of any settlement it is ag\",\n            \"c\": \"A Lien: shall be given for the Attorney's fees and advances upon any settlement or judgment made or secured herein, and is authorized to deduct these fees and advances therefrom and to pay the balance to Client.\",\n            \"b\": \"Contingency Fee: Thirty three and one third (33.33%) of all gross amounts recovered from any source, including medical, med pay and medical lien reductions, Uninsured motorist, Underinsured motorist, and Forty percent (40%) of any such amounts recovered i\",\n            \"j\": \"Binding Arbitration: Client hereby agrees and authorizes PAG to elect at his discretion binding arbitration in Client's underlying case. Client understands and agrees that if this election occurs, Client waves his/her right to a jury trial.\",\n            \"a\": \"Date of Accident/Injury:\",\n            \"h\": \"Trial Costs: If, after investigating and/or prosecuting this action, PAG determines that in his professional opinion that there is a substantial likelihood of a defense\\r\\nverdict at trial and explains the reasoning and factual basis to Client and Client is\",\n            \"d\": \"All Costs: to prosecute this action such as fees for court filings, depositions.medical reports, experts, litigation costs, contract attorneys, investigation, or other incidental expenses will be advanced by PAG during prosecution of this claim and will b\"\n        },\n        \"disclosureRequiringSpecialConsent\": {\n            \"id\": 1,\n            \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su\",\n            \"rightToRevoke\": null,\n            \"expiration\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su\",\n            \"footerText\": null\n        },\n        \"generalAgreement\": {\n            \"id\": 1,\n            \"agreement\": \"Pursuant to Section 265.2(c) of the California Code of Regulations, Title 10,Chepter 5; I authorize Pacific Attorney Group, my attorney (s) to act on my\\r\\nbehalf in the settlement of any claims that I may have, including property damage, income loss, medic\"\n        },\n        \"powerOfAttorney\": {\n            \"id\": 1,\n            \"authText\": \"I_____________.the undersigned, hereby make, constitute and\\nappoint the Pacific Attorney Group, my true and lawful attorney to act for me, and in my\\nname, and for my benefit, to do any or all of the following:\",\n            \"point1\": \"To endorse and sign my name on any and all checks or drafts for the payment of money, and to deposit same into a Client's Trust Account, to endorse and\\r\\nexecute my name on any and all documents necessary to settle, dismiss or withdraw from my case, includ\",\n            \"point2\": \"In the event attorney is unable to locate me (by sending a Certified letter to the address last known by the attorney), I authorize attorney to negotiate any binding\\r\\nsettlement agreement, with any person or entity regarding any and all damages (generalor\",\n            \"point3\": \"In the event attorney is unable to locate me (by sending a Certified letter to the address last known by attorney), I authorize attorney to dismiss any lawsuit, or to withdraw from my case prior to filing suit, if it is attorney's judgment that the potent\",\n            \"point4\": \"To allow attorney to withdraw from Client's Trust Account, all attorney fees, costs, advances, and liens, and to retain the balance (if any) in said account, until said\\r\\nfunds can be disbursed to me at a later time. Attorney may place the balance in an in\",\n            \"bottomText\": \"I hereby grant to said attorney the full power and authority to do all things necessary to carry out the above. I hereby ratify all that attorney had done or shall do to carry out the above. This POWER OF ATTORNEY is given for the reason that I may be lea\"\n        },\n        \"proofOfRepresentation\": {\n            \"id\": 1,\n            \"text\": \"simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su\",\n            \"representativeText\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su\",\n            \"note\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su\"\n        },\n        \"waiverOfConflicts\": {\n            \"id\": 1,\n            \"text1\": \"I hereby acknowledge that I have carefully read the foregoing letter, informing me that my\\r\\ninterests may potentially be in conflict with other parties in connection with Pacific Attorney Group's\\r\\nrepresentation of my interests in the matter described above. I expressly acknowledge that the\\r\\nconcurrent representation by Pacific Attorney Group of my interests and those of other parties\\r\\nconstitutes the representation of potentially conflicting interests, to the extent that my interests and those\\r\\nof other parties are adverse. I nevertheless knowingly and voluntarily consent to such concurrent\\r\\nrepresentation by Pacific Attomey Group.\\r\\nIn the event a conflict of interest arises in the füture which prevents Pacific Attorney Group from\\r\\ncontinuing to represent me, or in the event I elect to retain separate legal counsel, I waive any objection\\r\\n1o Pacific Attomey Group continuing to represent other parties, despite the fact I may have\\r\\ncommunicated confidential information to Pacific Attorney Group during the period of the concurrent\\r\\nrepresentation.\\r\\nI acknowledge that I have been advised that I have the right to seek independent legal con\\r\\nconnection with the advisability of waiving conflicts of interest and entering into this consent and\\r\\nwaiver, and I have had a reasonable opportunity to do so.\",\n            \"text2\": \"T acknowledge that I have been informed of the following by the Pacific Attorney Group\\r\\nand by the Document Delivery Representative:\\r\\n1. The Document Delivery Representative is not an attorney and can NOT give me\\r\\nlegal advise, discuss the merits of my case, or give an opinion as to the outcome\\r\\nof my case,\\r\\n2. The Document Delivery Representative is here to only deliver paperwork for my\\r\\nown review and signature.\\r\\nI will address all my questions and concerns directly to the Attorney at the Pacific\\r\\nAttorney Group, PLC\"\n        },\n        \"waiverOfPotentialConflictOfInterest\": {\n            \"id\": 1,\n            \"text\": \"You have asked Pacific Attorey Group, PLC (the \\\"firm\\\") to concurrently represent all of you in\\r\\nconnection with an accident noted above. A lawyer's concurrent representation of two or more clients\\r\\nin the same matter raises the possibility or potential for conflicts of interest, as defined in Rule 3-310 of\\r\\nthe California Rules of Professional Conduct. to arise.\\r\\nWe will agree to represent all of your interests in this matter provided that you consent to joint\\r\\nrepresentation notwithst(adingthe potential for conflicts of interest. In addition, we will agree to\\r\\nrepresent you jointly so long as it is understood and agreed that if the firm is ethically required or\\r\\npernitted to withdraw due to a conflict of interest, or is discharged by one of you, the firm may continue\\r\\nto represent the remaining clients) in this and in any other matter, even where be representation may be\\r\\nadverse to one of you and even if confidential information was obtained by the firm during this joint\\r\\nrepresentation that could be adverse to one or more of your interests in another proceeding.\\r\\nAt the present time, we are not aware of facts or circumstances making it reasonably likely that\\r\\nan actual conflict of interest might arise among you in this matter. Likewise, you have not brought to\\r\\nour attention any factual disagreements between you, or other circumstances that you believe might\\r\\nsuggest you have actually divergent interests, disagreements, or conflicts among you with regard to the\\r\\nprosecution of this matter. Nevertheless, that risk is always present. In addition, presently unforeseen\\r\\nconflicts of interest could potentially arise in the future hased on further factual investigation or\\r\\nunanticipated developments.\\r\\nYou should consider the potential conflict of interest issues that can arise from the attorney's\\r\\nduties of loyalty and confidentiality in a joint representarion. The duty of loyalty requires us to act in\\r\\neach of our client's best interests. We cannot give legal advice to one of you that might be detrimental\\r\\nor harmful to another of you, as that would result in divided loyalty. Nor can we represent one of you\\r\\nagainst the other in a disagreement while we jointly represent you. A potential conflict of interest could\\r\\nalso arise if we were called upon to give legal advice to one of you that could have an adverse impact on\\r\\nthe other of you. For example: a difference in recollection of important facts could arise in the future\\r\\nbetween parties; discovery or investigation might reveal that one of you is partially responsible for the\\r\\nalleged harm while the other is not; the amount of money available to satisfy any judgment may be\\r\\ninsufficient to fully compensate each of you, resulting in competing and conflicting claims to the\\r\\navailable funds; disputes may arise over how to allocate any damages award; one client may wish to\\r\\nsettle while the other may not, or we may receive other conflicting instructions regerding how to\\r\\nproceed in the lawsuit. We cannot agree to jointly represent your interests witbout your informed\\r\\nwritten consent and waiver of these potential conflicts.\\r\\nThe duty of confidentiality also requires us to protect your confidential information. Where two\\r\\nor more clients are represented in the same matter, however, all confidential information is shared\\r\\nbetween the joint clients. See California Evidence Code $ 962. This means that if one client has\\r\\nconfidential information that the client does not want to be shared with the other client, then separate\\r\\nlegal counsel should be retained. The risks of sharing confidential information can be reduced or\\r\\ncliminated if each of you retain separate and independent legal counsel. Consequently, if you are not\\r\\ncomfortable accepting the potential risks associated with the sharing of confidential information, you\\r\\nshould consider retzining independent counsel.\\r\\nAdditionally, other potential conflicts can arise when one law firm represents multiple clients.\\r\\nFor example, a disagreement could arise in the future as to the respective duties, responsibilities or\\r\\nculpability of the parties. The firm mighthe given conflicting instructions from you regarding strategy,\\r\\nhow to handle the defense, or whether to settle, and on what terms. We could not act as your attorneys\\r\\nin resolving any such disagreements or conflicting instructions. You would need to resolve such\\r\\ndisagreements among yourselves, without or without independent legal counsel, and provide us with a\\r\\ncommon set of instructions. In the event you could not agree and we continued to receive conflicting\\r\\ninstructions, we might be required to withdraw from the representation entirely and you would be\\r\\nrequired to each hire separate legal counsel. Alternatively, under the consent and waiver discussed\\r\\nbelow, we might withdraw from representing one of you and continue representing the other(s). As\\r\\ndiscussed above. in that circumstance, confidential information that we gained during our concurrent\\r\\nrepresentation of your interests might be used by our remaining client(s) in a manner adverse to your\\r\\ninterests.\\r\\nIn the event that a conflict of interest arises which prevents us from continuing to jointly\\r\\nrepresent you, withdrawal from the representation might be required. In that event, you might be\\r\\nrequired to hire new counsel and incur considerable additional expense. A withdrawal could also come\\r\\nat an inconvenient time, and delays harmful to your interests could be encountered as a result of your\\r\\nneed to hire new counsel.\\r\\nYou should consider these risks in deciding whether to consent to our joint representation. You\\r\\nshould also consider the potential benefits of concurrent representation, which include a significant\\r\\ndegree of economic efficiency, coordinated legal assistance and a unified case strategy, and efficient use\\r\\nof knowledge gained in the case.\\r\\nLikewise, because each of you has the right to discharge the firm and retain new legal counsel at\\r\\nany time and for any reason, or no reason at all. it is agreed that, if you did decide to discharge the firm\\r\\nand hire new counsel, then the firm could continue to represent the remaining client(s), that none of you\\r\\nwould object to the firm continuing to represent the remaining clients, and that none of you would seek\\r\\nto disqualify the firm from continuing to represent the remaining clients, even in matters that are\\r\\nsubstantially relatéd to work done for you in the past, or in this matter, and even if such representation\\r\\nwas adverse to your interests.\\r\\nif the firm withdrays from your representation, or if you elects to retain separate counsel, then\\r\\nyou agrees to accept a copy of the client file in full discharge of the firm's duty to deliver the client file,\\r\\nand agrees that the firm may retain the original client file.\\r\\nIf you are not completely comfortable at this time with any of the risks. consequences,\\r\\nagreements and procedures discussed above, then you should not agree to have the same law firm jointly\\r\\nrepresent your interess. Rather, you should retain separate and independent counsel. After you have\\r\\nconsidered the risks and consequences. as well as the benefits, of the law firm's concurrent\\r\\nrepresentation of your interests, and if you are comfortable with the arrangement described above, then\\r\\nyou should countersign this letter, signifying your receipt of this conflicts of interest disclosure and your\\r\\nagreement and consent to the firm's representation of potentially or actually conflicting interests.\\r\\nPlease take as much time as you need to decide whether to consent to the joint representation.\\r\\nYou are encouraged to consult with independent legal counsel regarding these disclosures and the\\r\\nconsequences of waiving potential or actual conflicts of interest as outlined above.\"\n        }}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{localhost}}/api/uploadfile",
+			"request": {
+				"url": "{{localhost}}/api/uploadfile",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY1MDA5NTE2MiwiZXhwIjoxNjUwMTEzMTYyfQ.qS3eDOgNrtAkWoAgWw1cUhqLd1RlU9-UaMq6YqAUoQwHThZ1RQx1UMbDDi01hSUjia5Sz0k_2cTgxcsiohce_A",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
