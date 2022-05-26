@@ -1,13 +1,30 @@
 import styled from 'styled-components';
 export const NavbarStyledMain=styled.div`
-    .authenticate-buttons-scroll{
-    margin-top: 4px !important;
-    }
+.authenticate-buttons-scroll{
+margin-top: 4px !important;
+}
 .scroll {
-background-color: black;
-.nav-link{
- color:white !important;   
- 
+background-color: white;
+box-shadow: 0px 15px 30px rgb(0 0 0 / 10%);
+.authenticate-buttons{
+margin-top: 16px;
+.signup-btn{
+color: #FFFFFF;
+font-size:16px;
+background-color: #ED1C24;
+margin-right: 20px;
+
+}   
+.login-btn{
+background-color:transparent;
+font-size:16px;
+border: 1px solid #363636;
+color: #363636;
+margin-right: 88px;
+@media screen and (max-width:480px) {
+ background-color: red;
+}
+} 
 }
 }
 @media screen and (max-width:480px) {
@@ -19,25 +36,20 @@ z-index:50;
 .authenticate-buttons{
 margin-top: 16px;
 .signup-btn{
-background-color: #FFFFFF;
-font-size:16px;
 color: #ED1C24;
+font-size:16px;
+background-color: #FFFFFF;
 margin-right: 20px;
-@media screen and (max-width:480px) {
- background-color: black;
- color:white;
 
-}
 }   
 .login-btn{
-background:transparent;
+background-color: #ED1C24;
 font-size:16px;
 border: 1px solid #FFFFFF;
 color: #FFFFFF;
 margin-right: 88px;
 @media screen and (max-width:480px) {
  background-color: red;
-
 }
 } 
 }

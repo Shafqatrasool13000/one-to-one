@@ -12,18 +12,22 @@ height:40px;
 position: absolute;
 left:3%;
 top:50%;
+z-index: 30;
 
 }
 .next-slide-img{
 position: absolute;
 right:3%;
 top:50%;
+z-index: 30;
+
 }
 .testomonials{
 margin-top:40px;    
 }
 .title{
-font-weight:700;
+font-family: 'EnnVisionsBold';
+font-weight:bold;
 color: #363636;
 font-size: 32px;
 }

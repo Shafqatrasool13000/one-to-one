@@ -4,6 +4,7 @@ import { HeroSectionStyled } from './StyledHeroSection'
 import heroImg from '../../assets/icons/ic_banner_img_2.svg';
 import crown from '../../assets/icons/ic_logo_crown.svg';
 import Navbars from '../Navbar/Navbar';
+import { Link } from 'react-router-dom';
 const HeroSection = () => {
     return (
         <HeroSectionStyled>
@@ -34,8 +35,9 @@ const HeroSection = () => {
                             </h1>
                             <p className='details'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             <span>
-
+                             <Link to='/shop'>
                             <button className="btn btn-sm shop-btn px-5 py-2">Shop Now</button>
+                             </Link>
                             </span>
                         </div>
                     </Col>

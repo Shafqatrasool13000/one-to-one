@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Card } from 'react-bootstrap'
 import { ProductStyledMain } from './StyledProduct';
+import fillHeart from '../../assets/icons/ic_like_sel.svg';
+import emptyHeart from '../../assets/icons/ic_like.svg';
+import { Link,} from 'react-router-dom';
 
+const Product = ({ data,index }) => {
+    const [heart, setHeart] = useState(false);
 
-const Product = ({ data }) => {
+    
     return (
         <ProductStyledMain>
 
             <Card>
                 <div className='position-relative'>
                     <div className="img-heart">
-                        {data?.fillHeart ? (
-                            <img src={data.fillHeart} alt="" />) : (
-                            <img src={data.emptyHeart} alt="empty" />
+                        {heart? (
+                            <img onClick={()=>setHeart(!heart)} src={fillHeart} alt="heart" />) : (
+                            <img onClick={()=>setHeart(!heart)} src={emptyHeart} alt="empty" />
                         )
                         }
                     </div>
@@ -26,7 +31,9 @@ const Product = ({ data }) => {
                         )
 
                     }
-                    <Card.Img variant="top" src={data.img} />
+                    <Link to={`/products/${index}`}>
+                    <Card.Img  variant="top" src={data.img} />
+     </Link>
                 </div>
                 <Card.Body>
                     <Card.Title>

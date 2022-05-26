@@ -39,8 +39,8 @@ const Navbars2 = () => {
             >
               <NavLink className='nav-link activate' to="/">Home</NavLink>
               <NavLink className='nav-link ' to="/shop">Shop</NavLink>
-              <NavLink className='nav-link' to="/about">About</NavLink>
-              <NavLink className='nav-link' to="/contact">Contact Us</NavLink>
+              <Nav.Link className='nav-link' href="#about">About</Nav.Link>
+              <Nav.Link className='nav-link' href="#contact">Contact Us</Nav.Link>
             </Nav>
             <div className={`${!navbar?'authenticate-buttons':'authenticate-buttons  authenticate-buttons-scroll'}`}>
               <button className='btn btn-sm signup-btn px-3'>Sign Up</button>

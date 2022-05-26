@@ -15,9 +15,10 @@ top:5%;
 background-color: #ED1C24;
 padding:4px 10px;
 color: #FFFFFF;
-border-radius:10px ;  
+border-radius:5px ;  
 .discount{
  margin: 0;
+ font-size: 11px;
 }
 }
 .card-img-top{

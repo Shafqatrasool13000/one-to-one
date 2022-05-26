@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 export const Navbar2StyledMain=styled.div`
-    .authenticate-buttons-scroll{
-    margin-top: 4px !important;
-    }
-.scroll {
-background-color: black;
-.nav-link{
- color:white !important;   
- 
+.authenticate-buttons-scroll{
+margin-top: 4px !important;
 }
+.scroll {
+background-color: white;
+box-shadow: 0px 15px 30px rgb(0 0 0 / 10%);
+
 }
 @media screen and (max-width:480px) {
 position: static;
@@ -23,22 +21,16 @@ color: #FFFFFF;
 font-size:16px;
 background-color: #ED1C24;
 margin-right: 20px;
-@media screen and (max-width:480px) {
- background-color: black;
- color:white;
 
-}
 }   
 .login-btn{
-background:transparent;
+background-color:transparent;
 font-size:16px;
-border: 1px solid #ED1C24;
-color: #ED1C24;
+border: 1px solid #363636;
+color: #363636;
 margin-right: 88px;
 @media screen and (max-width:480px) {
  background-color: red;
- color: white;
-
 }
 } 
 }

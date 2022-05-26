@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { StyledProductDetails } from './StyledProductDetails';
 import blackGloves from '../../assets/icons/blackgloves.png';
@@ -15,7 +15,14 @@ import Products from '../Products/Products';
 import Footer from '../Footer/Footer';
 import Navbars2 from '../Navbar/Navbar2';
 
+import { Dropdown, Menu, Space } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+
 const ProductDetails = () => {
+    const [cartAdd, setCartAdd] = useState(false);
+    const [pc, setPc] = useState('1pc');
+    const [boxColor, setBoxColor] = useState(null);
+    const [showColors, setShowColors] = useState(false);
     const handProtectProducts = [{
         img: redgloves, emptyHeart: emptyHeart
     }, {
@@ -25,9 +32,39 @@ const ProductDetails = () => {
     }, {
         img: blackgloves, fillHeart: fillHeart
     }];
+    const sizes = ['S', 'M', 'L', 'XL'];
+    const handleMenuClick = (e) => {
+        setPc(e.key);
+    };
+    const colorChange=(color)=>{
+        setBoxColor(color);
+        setShowColors(false);
+    }
+    const menu = (
+        <Menu
+            onClick={handleMenuClick}
+            items={[
+                {
+                    label: '1pc',
+                    key: '1pc',
+
+                },
+                {
+                    label: '2pc',
+                    key: '2pc',
+
+                },
+                {
+                    label: '3pc',
+                    key: '3pc',
+
+                },
+            ]}
+        />
+    );
     return (
         <StyledProductDetails>
-            <Navbars2/>
+            <Navbars2 />
             <div className="details-inner-container">
                 <Container>
                     <Row>
@@ -45,12 +82,26 @@ const ProductDetails = () => {
                                         <p className="colon">:</p>
                                     </div>
                                     <div className="details d-flex align-items-center">
-                                        <p className="color-name me-2 mt-2">Golden</p>
-                                        <div className="color-box"></div>
-                                        <div className="drop-down ms-3 ">
-                                            <img src={drop_down} alt="drop" />
+                                        <p className="color-name me-2 mt-2">{boxColor}</p>
+                                        <div className="color-box" onClick={()=>setShowColors(!showColors)} style={{
+                                            backgroundColor:`${boxColor?boxColor:'#E4B965'}`
+                                        }}></div>
+                                        <div className="drop-down ms-3 mb-1 ">
+                                            <DownOutlined />
                                         </div>
                                     </div>
+                                    
+                                </div>
+                                <div className={`${showColors?"d-block box-colors-section d-flex flex-column align-items-end  mx-4":'d-none '}`}>
+                                <div className="color-box mt-3" style={{
+                                    backgroundColor:'red'
+                                }} onClick={()=>colorChange('red')}></div>
+                                <div className="color-box mt-3" style={{
+                                    backgroundColor:'green'
+                                }} onClick={()=>colorChange('green')}></div>
+                                <div className="color-box mt-3" style={{
+                                    backgroundColor:'blue'
+                                }} onClick={()=>colorChange('blue')}></div>
                                 </div>
                                 <div className="quantity-section d-flex pb-1 mt-3 justify-content-between">
                                     <div className="title-section d-flex align-items-center">
@@ -58,30 +109,42 @@ const ProductDetails = () => {
                                         <p className="colon">:</p>
                                     </div>
                                     <div className="details d-flex align-items-center">
-                                        <p className="color-name me-2 mt-2">1pc</p>
-                                        <div className="color-box"></div>
-                                        <div className="drop-down ms-3">
-                                            <img src={drop_down} alt="drop" />
-                                        </div>
+                                        <p className="color-name me-2 mt-2">{pc}</p>
+                                        
+                                        <Dropdown overlay={menu}>
+                                            <Space>
+                                                {null}
+                                                <DownOutlined />
+                                            </Space>
+                                        </Dropdown>
                                     </div>
                                 </div>
                                 <div className="size-section pb-1 mt-3 ">
                                     <div className="d-flex inner-data justify-content-between">
-
                                         <div className="title-section d-flex align-items-center">
                                             <p className="title">Size</p>
                                             <p className="colon">:</p>
                                         </div>
                                         <div className="details d-flex align-items-center">
-                                            <Link to='#action' className="color-name me-2 mt-2">See Guide</Link>
+                                            <Link to='#action' style={{
+                                                color: '#ED1C24',
+                                                textDecoration: 'underline'
+                                            }} className="color-name fw-bold me-2 mt-2">See Guide</Link>
                                         </div>
 
                                     </div>
                                     <div className="sizes pb-3">
-                                        {['S', 'M', 'L', 'XL'].map((size, index) => (
-                                            <button key={index} className={`${index !== 1 ? "btn btn-sm mt-3 mt-lg-0 size-btn " : "btn btn-sm mt-3 mt-lg-0 size-btn selected"}`}>{size}</button>
-                                        ))
-                                        }
+                                        <div className='filter-btns d-flex'>
+                                            {
+                                                sizes.map((title, index) => (
+                                                    <div className='filter' key={index}>
+                                                        <input type="radio" id={title} name="brand" value={title} />
+                                                        <label className='px-5' htmlFor={title}>{title}</label>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div className="price-section d-flex justify-content-between mt-3">
@@ -98,17 +161,20 @@ const ProductDetails = () => {
                                         <Col md={6}>
                                             <div className="d-flex position-relative">
                                                 <img src={cart} alt="add-cart" className='position-absolute cart-img' />
-                                                <button className="add-btn text-center">
-                                                    Add To Cart
+                                                <button onClick={() => setCartAdd(true)} className="add-btn text-center">
+                                                    {cartAdd ?
+                                                        'Add To Cart' :
+                                                        'Added To Cart'
+                                                    }
                                                 </button>
                                             </div>
                                         </Col>
                                         <Col md={6}>
                                             <Link to='/myCart'>
 
-                                            <button className="buy-now mt-3 mt-md-0">
-                                                Buy Now
-                                            </button>
+                                                <button className="buy-now mt-3 mt-md-0">
+                                                    Buy Now
+                                                </button>
                                             </Link>
                                         </Col>
 
@@ -128,14 +194,14 @@ const ProductDetails = () => {
                 </Container>
                 <div className="related-products">
                     <Container>
-                    <h5 className="title">Related Products</h5>
+                        <h5 className="title">Related Products</h5>
                     </Container>
                     <ArrowSlideProducts>
-                    <Products products={handProtectProducts} />
+                        <Products products={handProtectProducts} />
                     </ArrowSlideProducts>
                 </div>
                 <div className="footer-section">
-                    <Footer/>
+                    <Footer />
                 </div>
             </div>
         </StyledProductDetails>

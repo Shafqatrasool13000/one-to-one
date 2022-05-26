@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const StyledProductsHeading=styled.div`
-.first-section{
+display: flex;
+justify-content: space-between;
 .title{
 color:#363636;
-font-weight:bold;
+font-family: 'EnnVisionsBold';
+font-weight:500;
 font-size: 18px;
 letter-spacing: 0.8px;
 }
@@ -13,6 +15,7 @@ color:#ED1C24;
 text-decoration:underline;
 font-size: 14px;
 font-weight: 500;
+font-family: 'EnnVisionsBold';
 }    
-}
+
 `

@@ -5,23 +5,62 @@ import profile from '../../assets/icons/profile.jpg';
 import prevBtn from '../../assets/icons/ic_arrow_left.svg';
 import nextBtn from '../../assets/icons/ic_arrow_right.svg';
 import { Rate } from 'antd';
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 const Testomonial = () => {
-  const arr = [1, 2, 3];
+  const arr = [1, 2, 3,4,5];
+  const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  arrows:false,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+};
   return (
     <StyledTestomonial>
       <h5 className="title text-center">
         TESTIMONIALS
-      </h5>
+      </h5>     
       <div className="testomonials">
         <Container>
           <Row className='justify-content-center'>
             <span>
               <img className='prev-slide-img slide-img' src={prevBtn} alt="previous" />
             </span>
-            {
+       
+            
+        <Slider {...settings}>
+        {
               arr.map((item,index)=>(
-                <Col sm={6} md={4} key={index} className='mt-3 mt-md-0'>
+                <Col sm={6} md={4} key={index} className='mt-3 mt-md-0 px-3'>
                 <Card >
                   <Card.Body>
                     <div className="d-flex mt-2">
@@ -44,8 +83,8 @@ const Testomonial = () => {
                 </Card>
               </Col>
               ))
-            }
-           
+            }        
+        </Slider>
             <span>
               <img className='next-slide-img slide-img' src={nextBtn} alt="next" />
             </span>

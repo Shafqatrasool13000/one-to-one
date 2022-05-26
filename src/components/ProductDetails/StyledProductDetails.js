@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const StyledProductDetails = styled.div`
+.color-box{
+
+width: 90px;
+border-radius: 10px;
+height: 40px;
+cursor: pointer;
+}
 
 .colon{
 margin-left:100px;
@@ -50,16 +57,36 @@ color:#363636;
 
 .sizes{
 margin-top:30px;
-.size-btn{
-border:1px solid #707070 ;
-width: 100px;
+.filter-btns .filter> label {
+  color:#363636;
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'EnnVisionsBold';
+  font-size: 14px;
+  color:white;
+  border-radius: 7px;
+  text-align: center;
+padding:7px 15px;
+  cursor: pointer;
+
 }
-.selected{
-background-color:red;
-color:white;
+.filter-btns .filter >label:first-child{
+margin-left:0 !important;   
 }
-.size-btn:not(:first-child){
-margin-left:20px;
+.filter-btns .filter  input[type="radio"]+label{
+border-radius:6px;
+border:1px solid #363636;
+color:#363636;
+margin-left:15px;  
+}
+.filter-btns .filter  input[type="radio"]:checked+label { 
+  background-color:#ED1C24;
+  color:white;
+  border:1px solid #ED1C24;
+}
+
+.filter-btns .filter > input{
+display: none;
 }
 
 }
@@ -86,6 +113,16 @@ background-color:transparent;
 border: 2px solid #ED1C24;
 color:#ED1C24;
 border-radius: 7px;
+}
+.buy-now:hover{
+background-color: white;
+color: #363636;
+border: 1px solid #ED1C24;
+}
+.add-btn:hover{
+background-color: #363636 ;
+color: #FFFFFF;
+border: none;   
 }
 .buy-now{
 width:270px; 
